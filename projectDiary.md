@@ -7,13 +7,35 @@
 ---
 
 ### 🎫 TICKET-01: Technical Planning & Content Strategy
-- **Status:** ⬜ TO DO
+- **Status:** ⬜ DONE
 - **Story:** As a developer, I want to map out my copy and links before writing code so that my development workflow is seamless and error-free.
 - **Tasks:**
-  - [ ] Draft final text for the Hero Section introduction.
-  - [ ] Write impact-driven copy for the @mickiesThe KOTAPLACE project description.
-  - [ ] Gather URLs for GitHub profile, LinkedIn, and email contact links.
-  - [ ] Select font family (e.g., system-ui or Google Fonts Inter) and neon accent color code.
+  - [x] Draft final text for the Hero Section introduction.
+  >>> <p>Hello, i'm Refilwe,</p>
+    <h1>A software developer based somewhere and i Design and build stuff.</h1>font = google sans code [
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    ]
+    <strong>Great Digital stuff!</strong>
+    <btn>I want a website</btn>
+     <btn>I want a Software Developer</btn> montserrat/tahoma
+
+  - [x] Write impact-driven copy for the @mickiesThe KOTAPLACE project description.
+  >>> @mickiesThe KOTAPLACE — E-Commerce MVC Infrastructure
+An implementation of a dynamic restaurant ordering environment moving away from flat-file storage to automated data layers.
+• Architecture: Structured an enterprise-standard Model-View-Controller framework to decouple data handling, route definitions, and interface delivery.
+• Data Engineering: Replaced legacy, local JSON filesystem parsing (fs.readFile) with efficient MongoDB indexing and schema constraints to pull real-time database inputs.
+• Traffic Control: Built custom Express middleware and endpoint routers to handle asynchronous data streaming securely.
+
+  - [x] Gather URLs for GitHub profile, LinkedIn, and email contact links.
+  >>> github >> github.com/fenfe
+  >>> LinkedIn >> www.linkedin.com/in/dikutle-refilwe
+  >>> email >> mmadikutle@gmail.com
+
+  - [x] Select font family (e.g., system-ui or Google Fonts Inter) and neon accent color code.
+  >>> fonts >> google sans code & outfit
+
 
 ---
 
@@ -21,8 +43,8 @@
 - **Status:** ⬜ TO DO
 - **Story:** As a user, I want a well-structured page layout so that I can easily read through the developer's experience and projects on any device.
 - **Tasks:**
-  - [ ] Create `index.html` in the root folder.
-  - [ ] Build layout using HTML5 semantic elements (`<header>`, `<main>`, `<section>`, `<footer>`).
+  - [x] Create `index.html` in the root folder.
+  - [x] Build layout using HTML5 semantic elements (`<header>`, `<main>`, `<section>`, `<footer>`).
   - [ ] Add project containers with dedicated class names (`project-card`, `project-title`, `tags`, `links`).
   - [ ] Ensure all anchor tags (`<a>`) point to correct placeholders and use `target="_blank"` for external profiles.
 

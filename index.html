@@ -3,142 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice portfolio</title>
+    <title>Mmadikutle Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 
     <!-- External source for icons -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
-				<!-- External source for fonts -->
+				<!-- External source for fonts [outfit and google sans code]-->
 				<link rel="preconnect" href="https://fonts.googleapis.com">
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
+
+
 <body>
-    <!-- Above the fold, the most important content -->
-    <header id="home">
+
+
+
+    <!-- HERO SECTION -->
+    <header>
+        <h1>Hi, I'm Mmadikutle.</h1>
+        <p>A Full-Stack Developer based somewhere and i DESIGN & BUILD stuff. Great didgital applications using Node.js, Express, and MongoDB.</p>
+        
         <nav>
-            <ul>
-                <li><a href="#home">MmaDikutle</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#my-services">Services</a></li>
-                <li><a href="#my-work">My work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="https://github.com/fenfe" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/dikutle-refilwe" target="_blank">LinkedIn</a>
+            <a href="mailto:mmadikutle@gmail.com">Email Me</a>
         </nav>
-        <!-- End of nav -->
-        <!-- divs are used for styling purposes -->
-        <div class="flex-container hero-section">
-            <!-- image on the left side -->
-            <img src="/images/fifi-cartoon.jpg" alt="a picture of fifi" width="300px" height="auto">
-            <!-- text on the right side -->
-            <div class="text-container">
-                <h1>Hello, i'm Refilwe,</h1>
-                <p>a software Developer based somewhere and <br>
-                    i <span class="green">Design</span> & <span class="purple">Build</span> stuff. <br>
-                   <span>Great Digital </span> <span>Stuff !</span>.</p>
-                <a href="" class="cta-btn">I want a Website</a>
-                <a href="" class="cta-btn secondary">I want an Engineer</a>
-
-            </div>
-        </div>
     </header>
-    <!-- end of header / above fold -->
 
-    <!-- About me section -->
-    <section id="about">
-        <div class="flex-container">
-            <div class="text-container">
-                <h2>A little  bit about me</h2>
-                <p>I'm a developer passionate about the digital space, 
-                    crafting solid accessible digital products by creating
-                     experiences that not only look good but are created for performance and usability.</p>
-                     <!-- <br> -->
-                     <p>I'm a developer passionate about the digital space, crafting solid accessible
-                         digital products by creating experiences that not only look good but are 
-                         created for performance and usability.</p>
+    <!-- FEATURED PROJECTS SECTION -->
+    <main>
+        <h2>Featured Projects</h2>
 
-                         <span class="spoiler top">PSST: Spoiler Alert...</span><br>
-                         <span class="spoiler">Users love them too !!!</span>
+        <!-- Flagship Project: @mickiesThe KOTAPLACE -->
+        <article class="project-card">
+            <h3 class="project-title">@mickiesThe KOTAPLACE — E-Commerce MVC Infrastructure</h3>
+            <div class="tags">Node.js / Express / MongoDB / MVC</div>
+            
+            <p>An implementation of a dynamic restaurant ordering environment moving away from flat-file storage to automated data layers.</p>
+            
+            <ul>
+                <li><strong>Architecture:</strong> Structured an enterprise-standard Model-View-Controller framework to decouple data handling, route definitions, and interface delivery.</li>
+                <li><strong>Data Engineering:</strong> Replaced legacy, local JSON filesystem parsing (fs.readFile) with efficient MongoDB indexing and schema constraints to pull real-time database inputs.</li>
+                <li><strong>Traffic Control:</strong> Built custom Express middleware and endpoint routers to handle asynchronous data streaming securely.</li>
+            </ul>
+
+            <div class="links">
+                <!-- Keep href="#" for now until netlify deployment tomorrow -->
+                <a href="#" class="btn-demo">Live Demo →</a>
+                <a href="https://github.com" target="_blank" class="btn-code">GitHub Repo</a>
             </div>
-            <!-- <img width="350px" src="/images/illustration-mockups.svg" alt=""> -->
-        </div>
-    </section>
-    <!-- End of about me -->
+        </article>
 
-    <!-- services i offer -->
-    <section id="my-services">
-        <h2>Yes, I build STUFF, Great Digital STUFF,<br>
-            but first, I design them.</h2>
-        <div class="grid-container services">
-            <div class="card">
-                <div class="card-text">
-                    <img src="/images/heart.svg" alt="">
-                    <h3>Branding</h3>
-                    <p>"Our business has seen a significant increase in productivity "Our business has seen a significant increase in productivity"Our business has seen a significant increase in productivity</p>
-                </div>
+        <!-- Placeholders for smaller projects -->
+        <article class="project-card">
+            <h3 class="project-title">Interactive Frontend Application</h3>
+            <div class="tags">JavaScript (ES6) / CSS3 Grid / Fetch API</div>
+            <p>A client-facing interface utilizing asynchronous programming paradigms to manipulate dynamic real-time data streams inside the DOM.</p>
+            <div class="links">
+                <a href="#">Live Demo →</a>
+                <a href="https://github.com" target="_blank">GitHub Repo</a>
             </div>
+        </article>
+    </main>
 
-            <div class="card">
-                <div class="card-text">
-                    <img src="/images/heart.svg" alt="">
-                    <h3>UX/UI Design</h3>
-                    <p>"Our business has seen a significant increase in productivity "Our business has seen a significant increase in productivity"Our business has seen a significant increase in productivity</p>
-                </div>
-            </div>
+    <footer>
+        <p>&copy; 2026 Refilwe Dikutle. Built with clean semantic code.</p>
+    </footer>
 
-            <div class="card">
-                <div class="card-text">
-                    <img src="/images/heart.svg" alt="">
-                    <h3>Development</h3>
-                    <p>"Our business has seen a significant increase in productivity "Our business has seen a significant increase in productivity"Our business has seen a significant increase in productivity</p>
-                </div>
-            </div>
-        </div>
-        <a href="" class="cta-btn">More on my Insta</a>
-    </section>
-    <!-- end of services i offer -->
 
-    <!-- my previous work -->
-    <section id="my-work">
-        <h2>Have a look at some Previous STUFF i've built.</h2>
-        <div class="grid-container projects">
-            <img style="grid-area: img-1;" src="/images/one.jpg" alt="">
-            <img style="grid-area: img-2;"  src="/images/five.jpg" alt="">
-            <img style="grid-area: img-3;" src="/images/three.jpg" alt="">
-            <img style="grid-area: img-4;"  src="/images/four.jpg" alt="">
-            <img style="grid-area: img-5;" src="/images/six.jpg" alt="">
-        </div>
-        <a href="" class="cta-btn">More on my Insta</a>
-    </section>
-    <!-- end of my-work section -->
 
-<!-- END OF COMMON QUESTIONS -->
-
-<footer id="contact">
-    <h3>Ready to play and build stuff with me?</h3>
-    <p>Send me a message and let's discuss it over a cup of coffee.</p>
-    <form action="#">
-        <input class="input" type="email" placeholder="Enter your email">
-        <button type="submit" class="cta-btn">Let's talk</button>
-
-    </form>
-    <div class="socials">
-<div class="socials-1">
-    <h4>Follow me</h4>
-    <a href="www.github/fenfe" id="profile-link" target="_blank">Github</a>
-    <a href="#my-work">My work</a>
-    <a href="mailto:mmadikutle@gmail.com">Contact</a>
-</div>
-<div class="socials-2">
-    <h4>Call me</h4>
-    <p>083 246 5268</p>
-</div>
-</div>
-
-    <div class="attribution">
-        <p class="text-center text-sm">Designed and Developed with passion by <br>MmaDikutle 2025.</p>
-    </div>
-</footer>
 </body>
+
 </html>
