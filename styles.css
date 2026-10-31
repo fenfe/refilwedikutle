@@ -1,5 +1,5 @@
- /* CSS Variables */
- :root {
+/* CSS Variables */
+:root {
     --bg-color: #050505;        
     --card-bg: #0d0d0d;         
     --card-border: #1a1a1a;     
@@ -8,220 +8,513 @@
     --accent-mint: #00FFB2;     
     --accent-purple: #a855f7;   
 }
-   /* ==========================================================================
-       BASE MOBILE-FIRST STYLES (Applies to all devices, starting at small screens)
-       ========================================================================== */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
-    body {
-        background-color: var(--bg-color);
-        color: var(--text-primary);
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        line-height: 1.6;
-        /* Tight paddings for mobile screens so text doesn't hit edge of display */
-        padding: 2.5rem 1.25rem; 
-    }
-
-    /* Responsive layout wrapper */
-    .container { 
-        width: 100%; 
-        margin: 0 auto; 
-    }
-
-    header { margin-bottom: 3rem; }
-
-        /* Scaling fonts to be fluid */
-        h1 { 
-            font-size: 2rem; 
-            font-weight: 800; 
-            letter-spacing: -0.04em; 
-            margin-bottom: 1rem; 
-            line-height: 1.2;
-        }
-
-        header p { 
-            color: var(--text-secondary); 
-            font-size: 1.05rem; 
-            margin-bottom: 1.5rem; 
-        }
-
-            /* Layout navigation anchors neatly on narrow columns */
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 1rem 1.5rem;
-            }
-            
-            nav a {
-                color: var(--text-primary);
-                text-decoration: none;
-                font-weight: 500;
-                font-size: 0.95rem;
-                transition: color 0.2s ease;
-            }
-
-            nav a:hover { color: var(--accent-mint); }
-
-            .cta-btn {
-                display: inline-block;
-                background-color: var(--accent-mint);
-                color: #000000; 
-                padding: 0.6rem 1.2rem;
-                border-radius: 6px;
-                font-weight: 600;
-                text-decoration: none;
-                margin-top: 0.5rem;
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
-            }
-
-            h2 { 
-                font-size: 1.3rem; 
-                margin-bottom: 1.5rem; 
-                color: var(--text-primary); 
-                font-weight: 600; 
-                border-bottom: 1px solid var(--card-border); 
-                padding-bottom: 0.5rem;
-            }
-
-
-            /* Profile Image Layout Styling */
-.profile-container {
-    margin-bottom: 1.5rem;
+/* ==========================================================================
+   BASE MOBILE-FIRST STYLES (Applies to all devices, starting at small screens)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 5rem 1.25rem 2.5rem 1.25rem; 
+}
+
+/* Responsive layout wrapper */
+.container { 
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+/* ==========================================================================
+   THE SCROLL-UNDERNEATH STICKY HEADER EFFECT
+   ========================================================================== */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 1000;
+    background-color: rgba(5, 5, 5, 0.75); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+}
+
+.nav-container {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Google Sans Code", monospace;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover { 
+    color: var(--accent-mint); 
+}
+
+/* ==========================================================================
+   HERO / HEADER STYLES
+   ========================================================================== */
+header { margin-bottom: 3rem; }
+
+h1, h2, h3, h4 {
+    font-family: "Google Sans Code", monospace;    
+}
+
+h1 { 
+    font-size: 2rem; 
+    font-weight: 800; 
+    letter-spacing: -0.04em; 
+    margin-bottom: 1rem; 
+    line-height: 1.2;
+    text-align: center;
+}
+
+.hero-content p { 
+    color: var(--text-secondary); 
+    font-size: 1.05rem; 
+    margin-bottom: 1.5rem; 
+    text-align: center;
+}
+
+.hero-content { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 32px;
+}
+
+.greenText {
+    color: #00FFB2;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
+.cta-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.cta-btn {
+    display: inline-block;
+    /* background: linear-gradient(to right, #81ff8a, #32de84); */
+background-color: #32de84;
+    /* background-color: var(--accent-mint); */
+    color: #000000; 
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+#btn-outline {
+    border: 1px solid #00FFB2;
+    color: #00FFB2;
+    background-color: #000000;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 255, 178, 0.3);
+}
+
+h2 { 
+    font-size: 1.3rem; 
+    margin-bottom: 1.5rem; 
+    color: var(--text-primary); 
+    font-weight: 600; 
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.heading-sml {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .6px;
+    margin-top: 2rem;
+}
+
 /* ==========================================================================
    MOBILE-FIRST HERO GRID BASELINE (Default view for phone displays)
    ========================================================================== */
-   .hero-section {
+.hero-section {
     display: flex;
-    flex-direction: column-reverse; /* Stacks image securely on top for mobile impact */
+    flex-direction: column; 
     gap: 2rem;
     margin-bottom: 5rem;
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.hero-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-}
-/* Massive Mobile Image Configuration */
 .hero-image-wrapper {
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
     overflow: hidden;
-    border-radius: 12px; /* Smooth professional rounded corner edges */
-    border: 1px solid var(--card-border);
+    border-radius: 12px; 
+    padding: 2px;
 }
 
 .hero-large-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps aspect ratios locked without stretching */
+    object-fit: cover; 
     display: block;
-    filter: grayscale(20%); /* Adds an elegant, cohesive editorial look */
+    filter: grayscale(20%); 
 }
-.profile-img {
-    width: 80px;               /* Clean mobile profile size */
-    height: 80px;
-    border-radius: 50%;        /* Perfectly circular avatar shape */
-    object-fit: cover;         /* Prevents the photo from stretching or distorting */
-    border: 2px solid var(--card-border);
+
+/* ==========================================================================
+   MAIN COMPONENT & CARDS
+   ========================================================================== */
+main p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+section > p + p {
+    margin-top: 16px;
+}
+
+.project-card {
     background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
 }
-               /* Compact padding rules optimized for cards on phone screens */
-    .project-card {
-        background-color: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 8px;
-        padding: 1.25rem;
-        margin-bottom: 1.5rem;
-    }
 
-    .project-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
-    
-    .tags {
-        font-family: monospace;
-        font-size: 0.8rem;
-        color: var(--accent-purple);
-        margin-bottom: 1rem;
-        font-weight: bold;
-    }
+.project-card > p {
+    text-align: center;
+}
 
-    .project-card p { color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.95rem; }
-    
-    ul { list-style-type: none; margin-bottom: 1.5rem; }
-    li { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; padding-left: 1.25rem; position: relative; }
-    li::before { content: "→"; position: absolute; left: 0; color: var(--accent-mint); }
-    li strong { color: var(--text-primary); }
+.project-title { 
+    font-size: 1.15rem; 
+    font-weight: 700; 
+    margin-bottom: 0.5rem; 
+    line-height: 1.3; 
+}
 
+.tags {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
 
-    .links { display: flex; gap: 1.5rem; }
-    .links a {
-        color: var(--accent-mint);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-    }
-    .links a:hover { text-decoration: underline; }
-    
-    footer { text-align: center; margin-top: 4rem; color: #404040; font-size: 0.8rem; }
+.project-card p { 
+    color: var(--text-secondary); 
+    margin-bottom: 1rem; 
+    font-size: 0.95rem; 
+    text-align: center; 
+}
 
-       /* ==========================================================================
-       DESKTOP MEDIA QUERY LAYER (Scales proportions up smoothly on wider monitors)
-       ========================================================================== */
-       @media (min-width: 768px) {
-        body {
-            padding: 5rem 2rem; /* Give breathing space around elements on large monitors */
-        }
-        .container { 
-            max-width: 680px; /* Constrain wide stretches to match clean reading columns */
-        }
-        h1 { 
-            font-size: 2.5rem; 
-        }
-        header p {
-            font-size: 1.15rem;
-        }
-        .project-card {
-            padding: 2rem; /* Increase layout padding metrics on desktop dashboards */
-        }
-        .project-title {
-            font-size: 1.25rem;
-        }
-        .profile-img {
-            width: 100px;          /* Scales up slightly on laptop/desktop monitors */
-            height: 100px;
-        }
-    }
+ul { 
+    list-style-type: none; 
+    margin-bottom: 1.5rem; 
+}
 
-    /* ==========================================================================
-   DESKTOP MEDIA QUERY LAYER (Triggers side-by-side grids on laptop/desktop viewports)
+li { 
+    color: var(--text-secondary); 
+    font-size: 0.9rem; 
+    margin-bottom: 0.75rem; 
+    padding-left: 1.25rem; 
+    position: relative; 
+    text-align: left;
+}
+
+li::before { 
+    content: "→"; 
+    position: absolute; 
+    left: 0; 
+    color: var(--accent-mint); 
+}
+
+li strong { 
+    color: var(--text-primary); 
+}
+
+.links { 
+    display: flex; 
+    gap: 1.5rem; 
+}
+
+.links a {
+    color: var(--accent-mint);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.links a:hover { 
+    text-decoration: underline; 
+}
+
+.testimonial-info {
+    flex-direction: column;
+    justify-items: center;
+    margin-top: 24px;
+}
+
+.testimonial-info img {
+    width: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+}
+
+.contacts {
+    padding: 10px;
+    margin-top: 16px;
+}
+
+.contacts > a {
+    color: var(--accent-mint);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.contacts > img {
+    width: 50px;
+}
+
+.copyrights {
+    text-align: center; 
+    margin-top: 4rem; 
+    color: #404040; 
+    font-size: 0.8rem; 
+}
+
+/* ==========================================================================
+   DESKTOP MEDIA QUERY LAYER (Triggers cleanly on wider viewports)
    ========================================================================== */
 @media (min-width: 900px) {
-    /* Expand the layout box wrapper container to hold two wide columns */
-    .container { 
-        max-width: 1000px; 
+    body {
+        padding: 7rem 4rem 5rem 4rem; 
     }
 
+    /* Wrap and center sections smoothly on widescreen displays */
+    .hero-section, main, .about, footer {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    /* 1. HERO SECTION SIDE-BY-SIDE GRID */
     .hero-section {
         display: grid;
-        grid-template-columns: 1.2fr 1fr; /* Locks copy and layout image perfectly side-by-side */
+        grid-template-columns: 1.2fr 1fr;
         gap: 4rem;
         align-items: center;
         margin-bottom: 7rem;
+        /* border: 1px solid blue; */
     }
 
-    .hero-image-wrapper {
-        max-height: 500px; /* Expands depth of portrait showcase field */
+    .hero-content {
+        align-items: flex-start;
+        margin-top: 0;
+    }
+    .hero-content {
+        /* border: 1px solid blue; */
+    }
+    h1, .hero-content p, h2, main p {
+        text-align: left;
+        /* border: 1px solid red; */
+    }
+.hero-content h1 {
+    font-size: 2.2rem;
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+main h2, .about h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+    /* line-height: 2.2rem; */
+}
+    /* Horizon layout structure for desktop CTA areas */
+    .cta-btns {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .cta-btn {
+        width: auto;
+        padding: 0.6rem 2rem;
+    }
+
+    /* 2. PORTFOLIO WORKSTATION LAYOUT SHOWCASE */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        /* border: 1px solid red; */
+    }
+
+    main h2, main .heading-sml, main p {
+        grid-column: span 2;
+    }
+    main h2, main p{
+        text-align: center;
+    }
+    main p {
+        /* border: 1px solid red; */
+        padding: 0 20%;
+    }
+
+    /* 3. ABOUT BIOGRAPHY SIDE-BY-SIDE GRID */
+    .about {
+        display: flex;
+        /* flex-direction: row-reverse; */
+        /* display: grid; */
+        /* grid-template-columns: 1.2fr 1fr; */
+        gap: 2rem;
+        /* align-items: center; */
+        margin-bottom: 7rem;
+    }
+    .about-info .heading-sml {
+        /* border: 1px solid greenyellow; */
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .about h2, .about p {
+        /* border: 1px solid blue; */
+        display: block;
+    }
+.about-info p {
+    margin-bottom: 24px;
+}
+    /* Selects the specific about buttons row to spread horizontal */
+    .about .cta-btns {
+        grid-column: span 2;
+        /*  */
+    }
+    .about-section {
+        /* border: 2px solid white; */
+        margin-top: 4.5rem;
+        /* padding: 20px; */
+    }
+    .hero-large-img{
+        /* border: 1px solid red; */
+        width: 100%;
         height: 100%;
+        object-fit: contain;
+    }
+    .about-image {
+        /* width: 100%; */
+        /* he: 400px; */
+        /* object-fit: contain; */
+    }
+    /* .about-image {border: 1px solid red;
+        padding: 20px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+       
+    } */
+    /* .about-image img {
+        padding: 30px 10px;
+    } */
+    .testimonials .heading-sml {
+        /* background-color: #00FFB2; */
+        font-size: 16px;
+    }
+    .testimonials h2,.testimonials p {
+        text-align: center;
+    }
+
+    /* 4. TESTIMONIALS SECTION MULTI-COLUMN SEPARATION */
+    /* Selects the second instance of your about component block */
+    section.about:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    section.about:nth-of-type(2) h2, 
+    section.about:nth-of-type(2) .heading-sml {
+        grid-column: span 3;
+    }
+
+    section.about:nth-of-type(2) .project-card {
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    /* 5. FOOTER MULTI-COLUMN CONTACT PLACEMENT */
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        text-align: left;
+        align-items: start;
+        /* border: 1px solid yellow; */
+    }
+
+    footer h2, footer .heading-sml, footer p, footer .copyrights {
+        grid-column: span 2;
+    }
+.footer-headings h2 + h2 {
+    /* background-color: red; */
+    font-size: 36px;
+}
+    .contacts {
+        margin: 20px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+    }
+   .footer-contacts .copyrights {
+        text-align: center;
+        /* border: 1px solid yellow; */
+        display: inline-flex;
+        width: 100%;
     }
 }

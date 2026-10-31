@@ -6,76 +6,64 @@
     <title>Mmadikutle Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 
-    <!-- External source for icons -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
-				<!-- External source for fonts [outfit and google sans code]-->
-				<link rel="preconnect" href="https://fonts.googleapis.com">
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- External sources for icons & fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
-
-
 <body>
-<!-- <header>
-    <div class="profile-container">
-        <img src="images/fifi-cartoon.jpg" alt="Refilwe Dikutle Avatar" class="profile-img">
-    </div>
-    
-    <h1>Hi, I'm Mmadikutle.</h1>
-    <p>A Full-Stack Developer based somewhere and i DESIGN & BUILD stuff. Great didgital applications using Node.js, Express, and MongoDB.</p>
-     
-    <nav>
-        <a href="https://github.com/fenfe" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/dikutle-refilwe" target="_blank">LinkedIn</a>
-        <a href="mailto:mmadikutle@gmail.com">Email Me</a>
+
+    <!-- FIXED TOP NAVIGATION BAR -->
+    <nav class="top-navbar" >
+        <div class="nav-container">
+            <span class="logo">RD.</span>
+            <div class="nav-links">
+                <a href="https://github.com/fenfe" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/dikutle-refilwe" target="_blank">LinkedIn</a>
+                <a href="mailto:mmadikutle@gmail.com">Email</a>
+            </div>
+        </div>
     </nav>
-</header> -->
-<!-- HERO LAYOUT ARCHITECTURE -->
-<header class="hero-section">
-    <!-- Structural Text Node Column -->
-    <div class="hero-content">
-        <h1>Hi, I'm Refilwe Dikutle.</h1>
-        <p>A Full-Stack Developer based somewhere and i DESIGN & BUILD stuff. Great didgital applications using Node.js, Express, and MongoDB.</p>
-        
-        <nav class="hero-nav">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="mailto:your-email@example.com">Email Me</a>
-        </nav>
-        
-        <!-- Mint Green Highlight Button -->
-        <a href="mailto:your-email@example.com" class="cta-btn">Let's Connect</a>
-    </div>
 
-    <!-- Structural High-Impact Image Node Column -->
-    <div class="hero-image-wrapper">
-        <img src="images/fifi-cartoon.jpg" alt="Refilwe Dikutle Portrait" class="hero-large-img">
-    </div>
-</header>
+    <!-- HERO LAYOUT ARCHITECTURE -->
+    <header class="hero-section" >
+        <!-- Structural Text Node Column -->
+        <div class="hero-content">
+            <h1>Olá, I'm Refilwe Dikutle.</h1>
+            <p>A Full-Stack Developer based somewhere and I <span class="greenText">DESIGN</span> & <span class="greenText">BUILD</span> stuff. Great digital applications using Node.js, Express, and MongoDB.</p>
+            <!-- Mint Green Highlight Button -->
+            <div class="cta-btns">
+            <a href="mailto:refdikutle@gmail.com" class="cta-btn">I want a Wesite</a>
+            <a href="mailto:mmadikutle@gmail.com" class="cta-btn" id="btn-outline">I want a Developer</a>
+            </div>
+        </div>
 
-
+        <!-- Structural High-Impact Image Node Column -->
+        <div class="hero-image-wrapper">
+            <img src="images/ref.jpg" alt="Refilwe Dikutle Portrait" class="hero-large-img">
+        </div>
+    </header>
 
     <!-- FEATURED PROJECTS SECTION -->
     <main>
-        <h2>Featured Projects</h2>
+        <h2 class="heading-sml" id="projects">PORTFOLIO</h2>
+        <h2>Discover what I've created</h2>
+        <p>Each piece reflects my passion for innovation and commitment to delivering high-quality results. Feel free to explore and get inspired!</p>
 
         <!-- Flagship Project: @mickiesThe KOTAPLACE -->
         <article class="project-card">
             <h3 class="project-title">@mickiesThe KOTAPLACE — E-Commerce MVC Infrastructure</h3>
             <div class="tags">Node.js / Express / MongoDB / MVC</div>
-            
             <p>An implementation of a dynamic restaurant ordering environment moving away from flat-file storage to automated data layers.</p>
-            
             <ul>
                 <li><strong>Architecture:</strong> Structured an enterprise-standard Model-View-Controller framework to decouple data handling, route definitions, and interface delivery.</li>
                 <li><strong>Data Engineering:</strong> Replaced legacy, local JSON filesystem parsing (fs.readFile) with efficient MongoDB indexing and schema constraints to pull real-time database inputs.</li>
                 <li><strong>Traffic Control:</strong> Built custom Express middleware and endpoint routers to handle asynchronous data streaming securely.</li>
             </ul>
-
             <div class="links">
-                <!-- Keep href="#" for now until netlify deployment tomorrow -->
                 <a href="#" class="btn-demo">Live Demo →</a>
                 <a href="https://github.com" target="_blank" class="btn-code">GitHub Repo</a>
             </div>
@@ -92,13 +80,78 @@
             </div>
         </article>
     </main>
+    <section class="about about-section">
+        <div class="about-info">
+        <h2 class="heading-sml">ABOUT</h2>
+        <h2>Developer who loves to build stuff</h2>
+        <p>Hello! I'm Refilwe Dikutle, a passionate web developer who thrives on creating 
+            innovative solutions that tackle complex user challenges.</p>
+
+            <p>My attention to detail allows me to enhance every interaction, ensuring 
+                it not only boosts productivity but also elevates user satisfaction.</p>
+                <div class="cta-btns">
+                    <a href="mailto:mmadikutle@gmail.com" class="cta-btn">Let's Connect</a>
+                    <a href="#projects" class="cta-btn" id="btn-outline">View my Projects</a>
+                    </div>
+                    </div>
+                    <div class="hero-image-wrapper about-image">
+                        <img src="images/ref2.jpg" alt="Refilwe Dikutle Portrait" class="hero-large-img">
+                    </div>
+
+    </section>
+    <section class="about testimonials">
+        <h2 class="heading-sml">TESTIMONIALS</h2>
+        <h2>What my clients say</h2>
+       
+        <article class="project-card">
+            <p>"Refilwe is an outstanding developer. She understood our needs right away and delivered 
+                a website that exceeded expectations. Great communication, attention to detail, and top-notch skills. Highly recommended!"</p>
+                <div class="testimonial-info">
+                    <img src="images/bozi.jpg" alt="">
+                    <h4>Omphemetse Dikutle</h4>
+                    <p>Founder at Dithagama</p>
+                </div>
+        </article>
+        <article class="project-card">
+            <p>"Refilwe is an outstanding developer. She understood our needs right away and delivered 
+                a website that exceeded expectations. Great communication, attention to detail, and top-notch skills. Highly recommended!"</p>
+                <div class="testimonial-info">
+                    <img src="images/bozi.jpg" alt="">
+                    <h4>Omphemetse Dikutle</h4>
+                    <p>Founder at Dithagama</p>
+                </div>
+        </article>
+        <article class="project-card">
+            <p>"Refilwe is an outstanding developer. She understood our needs right away and delivered 
+                a website that exceeded expectations. Great communication, attention to detail, and top-notch skills. Highly recommended!"</p>
+                <div class="testimonial-info">
+                    <img src="images/bozi.jpg" alt="">
+                    <h4>Omphemetse Dikutle</h4>
+                    <p>Founder at Dithagama</p>
+                </div>
+        </article>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Refilwe Dikutle. Built with clean semantic code.</p>
+        <div class="footer-headings">
+        <h2 class="heading-sml">CONTACT ME</h2>
+        <h2>Let's talk!</h2>
+        <p>Feel free to reach out! I'm here to help and will respond within 24 hours. Your questions matter to me.</p>
+</div>
+<div class="footer-contacts">
+        <div class="contacts " >
+            <img src="images/favicon-32x32.png" alt="">
+            <h4>Call Me</h4>
+            <a href="#">083 246 5268</a> / <a href="#">074 045 0845</a>
+        </div>
+        <div class="contacts">
+            <img src="images/favicon-32x32.png" alt="">
+            <h4>Email Me</h4>
+            <a href="#">refdikutle@gmail.com</a>
+        </div></div>
+        <p class="copyrights">&copy; 2026 Refilwe Dikutle. Built with clean semantic code.</p>
+   
     </footer>
 
-
-
 </body>
-
 </html>
